@@ -1,38 +1,360 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(248.66deg, #91BEF3 0%, #48355B  100%);
   display: flex;
-  flex-direction: column;
+}
+
+
+.leftBlock{
+  width: 60%;
+  border-right: 2px solid rgba(255, 255, 255, 0.7);;
+}
+.rightBlock{
+  background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02);
+backdrop-filter: blur(21px);
+padding: 60px 60px 10px 60px;
+}
+
+.container2{
+  width: 85%;
+  margin: 0 auto;
+}
+
+.container{
+  width: 85%;
+  padding-top: 65px;
+  margin: 0 auto;
+}
+
+.weatherTop{
+  display: flex;
+  justify-content: space-between;
+}
+
+.weatherTop img{
+  width: 145px;
+  height: 100px;
+}
+
+.weatherTop .leftBtns{
+  width: 92.2px;
+  height: 40px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.18);
+}
+.weatherTop .leftBtns span{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #FFFFFF;
+  
+
+}
+
+.temperature{
+  max-width: 250px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100;
+  font-size: 164px;
+  line-height: 120%;
+  color: #FFFFFF;
+  position: relative;
+  margin-bottom: 20px;
+}
+.temperature span{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 120%;
+  letter-spacing: -0.05em;
+  color: #FFFFFF;
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+.date{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 120%;
+  color: #FFFFFF;
+  text-shadow: -1.51px 2.26px 0.75px rgba(0, 0, 0, 0.1);
+}
+
+.dayTime{
+  max-width: 260px;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 120%;
+  color: #FFFFFF;
+  text-shadow: -1.51px 2.26px 0.75px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+}
+.dayTime .day{
+  padding-right: 35px;
+  border-right: 3px solid #ffffff;
+}
+
+.characteristics{
+  max-width: 400px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 45px;
+}
+.whr{
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.characteristics img{
+  width: 22px;
+  height: 22px;
+  margin-right: 12px;
+}
+.whrInfo{
+  display: flex;
+  gap: 20px;
+
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 28px;
+
+  color: #FFFFFF;
+
+  text-shadow: -1.39839px 2.09758px 0.699193px rgba(0, 0, 0, 0.1);
+}
+.center{
+  padding-left: 35px; 
+  padding-right: 15px; 
+  border-left: 2px solid #fff;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.WeatherCards{
+  max-width: 690px;
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  margin-top: 75px;
+  
+  
+}
+.card{
+  width: 105px;
+  height: 210px;
+  display: flex;
+  flex-direction: column; 
+  background: rgba(255, 255, 255, 0.2);
+  filter: blur(0.569258px);
+  border-radius: 11.3852px;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Overpass';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+border: 1px solid #fff;
+  color: #FFFFFF;
+
+  text-shadow: -1.13852px 1.70778px 0.569258px rgba(0, 0, 0, 0.1);
+}
+.card img{
+  width: 67px;
+  height: 56px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-temp{
+  margin-top: 15px;
+}
+.cardDay{
+  margin-bottom: 15px;
+}
+
+form{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+form img {
+  width: 25px;
+  height: 25px;
+}
+form .loc{
+  width: 35px;
+  height: 35px;
+}
+
+form button{
+  width: 58px;
+  height: 59px;
+  left: 474px;
+  top: 38px;
+  background: linear-gradient(116.79deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.12) 99.45%);
+  backdrop-filter: blur(50px);
+  border-radius: 20px;
+  border: 0;
+}
+
+form input{
+  margin-left: 35px;
+  margin-right: 150px;
+  font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 120%;
+    background: transparent;
+    border: none;
+
+    color: #FFFFFF;
+
+    text-shadow: -1.51px 2.26px 0.75px rgba(0, 0, 0, 0.1);
+}
+
+/*clock*/
+
+.clock-middle img{
+  width: 75px;
+  height: 38px;
+  margin: 30px 0 50px 0;
+}
+.clock-side{
+  text-align: center;
+  margin-top: 50px;
+}
+.clock{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 580px;
+  margin-top: 40px;
+  padding-bottom: 45px;
+}
+.clock::before{
+  content: '';
+  height: 1px;
+  width: 500px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.clock::after{
+  content: 'i';
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: -5%;
+  bottom: -3%;
+  background: rgb(255, 255, 255, 0.3);
+  border-radius: 50%;
+  font-family: 'Inter';
+font-style: italic;
+font-weight: 600;
+font-size: 24px;
+
+/* identical to box height, or 29px */
+
+
+
+color: #FFFFFF;
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+}
+.clock-side img{
+  margin: 27px 0 40px 0;
+  width: 68px;
+  height: 34px;
+}
+.clock-card{
+  text-align: center;
+  margin: auto;
+  width: 115px;
+  height: 220px;
+  background: rgb(255, 255, 255, 0.3);
+  border-radius: 100px;
+}
+.clock-card-mid{
+  text-align: center;
+  margin: auto;
+  width: 140px;
+  height: 255px;
+  background: rgb(255, 255, 255, 0.3);
+  border-radius: 100px;
+}
+.first-time{
+  font-size: 28px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+.second-time{
+  font-size: 22px;
+  color: #EBEBEB;
+  
+}
+.first-time-mid{
+  font-size: 29px;
+  margin-bottom: 12px;
+  color: #fff;
+}
+.second-time-mid{
+  font-size: 24px;
+  color: #EBEBEB;
+}
+.clock-title{
+  margin-bottom: 28px;
+  font-size: 28px;
+  color: #ffff;
+}
+.mid-span{
+  font-size: 18px;
+}
+
+
+
+
+.progressBlock{
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin-top: 70px;
+  
+}
+
+.block img{
+  width: 193px;
+  height: 190px;
+}
+.progress-title{
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 300;
+font-size: 28px;
+line-height: 120%;
+/* identical to box height, or 34px */
+
+
+color: #FFFFFF;
+
+text-shadow: -1.51px 2.26px 0.75px rgba(0, 0, 0, 0.1);
 }
